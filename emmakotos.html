@@ -1,36 +1,39 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imagen Clickeable</title>
-    <style>
-        /* Estilo para hacer la imagen responsive */
-        img {
-            max-width: 100%; /* La imagen no superará el ancho del contenedor */
-            height: auto; /* La altura se ajustará automáticamente */
-            display: block; /* Asegura que la imagen sea bloque para evitar espacios vacíos */
-            margin: auto; /* Centra la imagen horizontalmente */
-            width: 300px; /* Ancho deseado para la imagen */
-            height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
-        }
-        /* Estilo para el contenedor del enlace */
-        .imagen-contenedor {
-            text-align: center; /* Centra el enlace horizontalmente */
-        }
-    </style>
 </head>
 <body>
-    <!-- Contenedor del enlace para centrarlo -->
-    <div class="imagen-contenedor">
-        <!-- Imagen clickeable -->
-        <a href="https://www.facebook.com/groups/garajesdecali"> <!-- Reemplaza la URL con el enlace que desees -->
-            <img src="http://imgfz.com/i/tD1OlKy.png" alt="Imagen Clickeable"> <!-- Reemplaza la URL con la ruta de tu imagen -->
-        </a>
-    </div>
+    <!-- Formulario para especificar el ancho y el alto de la imagen -->
+    <form id="imageSizeForm">
+        Ancho: <input type="text" id="widthInput" name="width" value="200"> <!-- Valor predeterminado del ancho -->
+        Alto: <input type="text" id="heightInput" name="height" value="400"> <!-- Valor predeterminado del alto -->
+        <button type="button" onclick="changeImageSize()">Actualizar</button>
+    </form>
+
+    <br>
+
+    <!-- Imagen clickeable -->
+    <a id="clickableImageLink" href="https://www.facebook.com/groups/6990920054342432"> <!-- Reemplaza la URL con el enlace que desees -->
+        <img id="clickableImage" src="http://imgfz.com/i/tD1OlKy.png" alt=""> <!-- Reemplaza "ruta_de_tu_imagen.jpg" con la ruta de tu imagen y "Descripción de la imagen" con una descripción apropiada -->
+    </a>
+
+    <script>
+        function changeImageSize() {
+            var width = document.getElementById("widthInput").value;
+            var height = document.getElementById("heightInput").value;
+
+            // Actualiza el tamaño de la imagen
+            document.getElementById("clickableImage").style.width = width + "px";
+            document.getElementById("clickableImage").style.height = height + "px";
+        }
+    </script>
 </body>
 </html>
+
+
 
 <!DOCTYPE html>
 <html lang="es">
