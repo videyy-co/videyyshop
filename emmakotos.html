@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,29 +7,16 @@
     <title>Imagen Clickeable</title>
 </head>
 <body>
-    <!-- Formulario para especificar el ancho y el alto de la imagen -->
-    <form id="imageSizeForm">
-        Ancho: <input type="text" id="widthInput" name="width" value="200"> <!-- Valor predeterminado del ancho -->
-        Alto: <input type="text" id="heightInput" name="height" value="400"> <!-- Valor predeterminado del alto -->
-        <button type="button" onclick="changeImageSize()">Actualizar</button>
-    </form>
-
-    <br>
-
     <!-- Imagen clickeable -->
-    <a id="clickableImageLink" href="https://www.facebook.com/groups/6990920054342432"> <!-- Reemplaza la URL con el enlace que desees -->
-        <img id="clickableImage" src="http://imgfz.com/i/tD1OlKy.png" alt=""> <!-- Reemplaza "ruta_de_tu_imagen.jpg" con la ruta de tu imagen y "Descripción de la imagen" con una descripción apropiada -->
+    <a href="https://www.facebook.com/groups/6990920054342432"> <!-- Reemplaza la URL con el enlace que desees -->
+        <img id="clickableImage" src="http://imgfz.com/i/tD1OlKy.png" alt="" style="width: 300px; height: 200px;"> <!-- Reemplaza "ruta_de_tu_imagen.jpg" con la ruta de tu imagen y "Descripción de la imagen" con una descripción apropiada -->
     </a>
 
     <script>
-        function changeImageSize() {
-            var width = document.getElementById("widthInput").value;
-            var height = document.getElementById("heightInput").value;
-
-            // Actualiza el tamaño de la imagen
-            document.getElementById("clickableImage").style.width = width + "px";
-            document.getElementById("clickableImage").style.height = height + "px";
-        }
+        // Cambiar el tamaño de la imagen
+        var imagen = document.getElementById("clickableImage");
+        imagen.style.width = "400px"; // Ancho deseado
+        imagen.style.height = "300px"; // Alto deseado
     </script>
 </body>
 </html>
